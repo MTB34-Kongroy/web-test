@@ -1,0 +1,221 @@
+/* Navbar */
+body {
+    font-family: Arial, sans-serif;
+}
+nav {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    background: #ffffff;
+    height: 120px; /* กำหนดความสูง navbar */
+    z-index: 9999;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* รายการเมนู */
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%; /* ให้ ul มีความสูงเต็ม navbar */
+}
+
+nav ul li {
+    margin: 0;
+    height: 100%; /* ให้ li มีความสูงเต็ม navbar */
+}
+
+/* ลิงก์เมนู */
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+nav ul li a:hover, nav ul li.active {
+    background: #46b830;
+    color: #f9f9f9;
+}
+body {
+    padding-top: 60px; /* ปรับให้พอดีกับความสูงของ navbar */
+}
+
+
+
+/* สไตล์ของ Popup */
+/* สไตล์ของ Popup */
+.popup {
+    display: none; /* ซ่อน Popup ก่อน */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* พื้นหลังมืด */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    position: relative; /* ให้ปุ่ม Close อยู่บนสุด */
+}
+
+/* ปุ่ม Close */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ปรับปรุงสไตล์เมื่อ hover ปิด */
+.close-btn:hover {
+    color: #ff0000;
+}
+
+/* ปุ่มปิดด้านล่าง */
+button {
+    padding: 10px 20px;
+    background-color: #46b830;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #399a26;
+}
+
+/*รูป*/
+.container {
+    position: relative;
+    display: inline-block;
+    
+  }
+.div.left {
+    width: 280px; /* ขนาดความกว้างของกรอบ */
+    height: 350px; /* ขนาดความสูงของกรอบ */
+   margin-top: 130px;
+   margin-left: 150px;
+    display: flex; /* จัดการตำแหน่งภายใน */
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    border: 2px solid #ccc; /* กรอบรอบรูป */
+    background-color: #f0f0f0; /* พื้นหลัง */
+  }
+  .div.left img {
+    width: 250px; 
+    height: 350px;
+    object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
+  }
+
+  .background-box {
+    position: fixed; /* ให้พื้นหลังติดกับหน้าจอ */
+    left: 0;
+    width: 1400px;
+    height: 520px;
+    background-image: url('pt/bghome.jpg');
+    z-index: -1; /* ทำให้พื้นหลังอยู่ด้านหลังเนื้อหา */
+    background-position: center; /* จัดตำแหน่งภาพตรงกลาง */
+    opacity: 0.3;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    
+  }
+
+  /*  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    max-height: 300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    left: 600px;
+    bottom: 355px;
+}
+
+.slide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+.fade {
+    animation: fadeIn 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* เมนูด้านซ้าย */
+.sidebar {
+    width: 120px;
+    height: 700px;
+    background: #333;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+/* หัวข้อเมนู */
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ลิงก์ในเมนู */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #575757;
+}
+
+/* ส่วนของเนื้อหา */
+.content {
+    margin-left: 270px; /* ทำให้เนื้อหาไม่โดนเมนูทับ */
+    padding: 20px;
+}

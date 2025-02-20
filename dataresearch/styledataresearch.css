@@ -1,0 +1,218 @@
+
+.texthead {
+    text-shadow: 5px 5px 5px #46b830;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* ✅ จัดให้ตัวเลขอยู่ในแถวเดียวกัน */
+.stats {
+    display: flex;
+    gap: 15px; /* เว้นระยะห่างระหว่างแต่ละค่า */
+}
+
+/* ✅ ปรับขนาดข้อความ */
+.stats p {
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+    margin-top : 10px;
+    font-size: 15px
+}
+table {
+    width: auto; /* ปรับความกว้างตามเนื้อหาของเซลล์ */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* กำหนดสไตล์สำหรับหัวตาราง */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* กำหนดสไตล์สำหรับข้อมูลในตาราง */
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* กำหนดสไตล์สำหรับการเลื่อนเมาส์ */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* กำหนดขนาดของเซลล์ให้พอดีกับข้อความ */
+th, td {
+    white-space: nowrap; /* ป้องกันไม่ให้ข้อความย่อบรรทัด */
+    text-overflow: ellipsis; /* ถ้าข้อความยาวเกินกว่าความกว้างให้ใช้ '...'
+    overflow: hidden; /* ซ่อนข้อความที่เกิน */
+}
+
+/* สไตล์ปุ่ม */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* สไตล์ของร่างกายของหน้าหมายถึง padding */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+ /* ตรึงตำแหน่งของปุ่มที่ด้านล่าง */
+ #pagination {
+    position: fixed;
+    bottom: 20px; /* เว้นระยะห่างจากด้านล่าง */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* ให้ปุ่มอยู่เหนือเนื้อหาของตาราง */
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* สไตล์ของปุ่ม */
+#pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ปรับให้มีสีเมื่อ hover */
+#pagination button:hover {
+    background-color: #0056b3;
+}
+
+/* ปรับตำแหน่งของตารางให้ไม่ชนกับปุ่ม */
+table {
+    margin-bottom: 80px; /* ให้มีระยะห่างจากปุ่ม */
+}
+
+/* styles.css */
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+   
+}
+
+#searchInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/*ตัวหมุน*/
+/* ปรับแต่งให้ Spinner อยู่กลางจอ */
+#loadingSpinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ตัว Spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ddd;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* การหมุนของ Spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* Navbar คงที่ด้านบน */
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    background: #d0f8ce;
+    height: 60px; /* กำหนดความสูง navbar */
+    z-index: 9999;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* รายการเมนู */
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%; /* ให้ ul มีความสูงเต็ม navbar */
+}
+
+nav ul li {
+    margin: 0;
+    height: 100%; /* ให้ li มีความสูงเต็ม navbar */
+}
+
+/* ลิงก์เมนู */
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* สถานะ Hover */
+nav ul li a:hover, nav ul li a:active {
+    background: #46b830;
+    color: #f9f9f9;
+}
+body {
+    padding-top: 60px; /* ปรับให้พอดีกับความสูงของ navbar */
+}
